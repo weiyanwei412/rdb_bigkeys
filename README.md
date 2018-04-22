@@ -7,7 +7,7 @@
     生成的bigkey报告为CSV格式：
 ![rdb_bigkeys_mem](https://github.com/GoDannyLai/rdb_bigkeys/raw/master/misc/img/bigkeys_csv.png)
 
-    使用很简单，全部就下面提供到5个参数：
+    使用很简单，全部就下面提到的5个参数：
         ./rdb_bigkeys --bytes 1024 --file bigkeys_6379.csv --sep 0 --sorted --threads 4 dump6379.rdb
 		上述命令分析dump6379.rdb文件中大于1024bytes的KEY， 由大到小排好序， 以CSV格式把结果输出到bigkeys_6379.csv的文件中
     
