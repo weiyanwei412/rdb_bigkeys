@@ -2,10 +2,10 @@
     线上遇到redis CPU高与网卡带宽跑满的情况， 很明显的bigkey问题， 但使用一个开源的以python编写的redis RDB分析工具来分析big key， 分析<br>
     150MB的RDB文件花了一个小时， 这太慢了， 因此使用go重新写了个分析RDB文件来找出big key的工具rdb_bigkeys
     速度很快， 同样分析150MB的RDB文件， 只要1分2秒。
-![rdb_bigkeys](https://github.com/GoDannyLai/rdb_bigkeys/raw/master/misc/img/time_150MB_RDB.png)
+![rdb_bigkeys](https://github.com/weiyanwei412/rdb_bigkeys/blob/master/misc/img/time_150MB_RDB.png)
 
     生成的bigkey报告为CSV格式：
-![rdb_bigkeys_mem](https://github.com/GoDannyLai/rdb_bigkeys/raw/master/misc/img/bigkeys_csv.png)
+![rdb_bigkeys_mem](https://github.com/weiyanwei412/rdb_bigkeys/blob/master/misc/img/bigkeys_csv.png )
 
     使用很简单，全部就下面提到的5个参数：
         ./rdb_bigkeys --bytes 1024 --file bigkeys_6379.csv --sep 0 --sorted --threads 4 dump6379.rdb
